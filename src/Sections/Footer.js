@@ -1,7 +1,9 @@
+import logo from "../Assets/Logo.png";
+
 export default function Footer() {
   return (
-    <footer>
-      <img src="/Logo.svg" />
+    <footer className="Footer">
+      <img src={logo} />
       <ul>
         <li>
           <a>Doormat Navigation</a>
