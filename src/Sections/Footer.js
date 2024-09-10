@@ -35,10 +35,10 @@ export default function Footer() {
           <a>Adress</a>
         </li>
         <li>
-          <a>phone number</a>
+          <a>Phone Number</a>
         </li>
         <li>
-          <a>email</a>
+          <a>Email</a>
         </li>
       </ul>
       <ul>
@@ -49,10 +49,10 @@ export default function Footer() {
           <a>Adress</a>
         </li>
         <li>
-          <a>phone number</a>
+          <a>Phone Number</a>
         </li>
         <li>
-          <a>email</a>
+          <a>Email</a>
         </li>
       </ul>
     </footer>

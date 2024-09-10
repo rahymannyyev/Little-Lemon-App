@@ -1,6 +1,6 @@
 import food from "./restauranfood.jpg";
 
-export default function Header() {
+export default function Header({ onReserveClick }) {
   return (
     <header className="Header">
       <div className="Text-Part">
@@ -12,10 +12,11 @@ export default function Header() {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button>Reserve a table</button>
+        <button onClick={onReserveClick}>Reserve a table</button>{" "}
+        {/* Trigger the function */}
       </div>
       <div className="Image-Part">
-        <img src={food} />
+        <img src={food} alt="Food" />
       </div>
     </header>
   );
