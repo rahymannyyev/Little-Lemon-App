@@ -91,7 +91,7 @@ h2 {
   justify-content: space-between;
 }
 Header button:hover {
-  background-color: #ffa500; /* Button hover effect */
+  background-color: #ffa500;
   cursor: pointer;
 }
 .Header .Text-Part button,
@@ -105,27 +105,24 @@ Header button:hover {
   font-size: large;
 }
 
-/*Main*/
-/* Main Container */
 main {
   padding-left: 11vw;
   padding-right: 11vw;
-  margin-top: 5vh; /* Add some spacing at the top */
+  margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
-/* Header Styling */
 .Main-Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 10vh;
-  margin-bottom: 3vh; /* Spacing between header and list */
+  margin-bottom: 3vh;
 }
 
 .Main-Header h1 {
   font-family: "Markazi Text", serif;
-  font-size: 2.5rem; /* Larger title */
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -133,13 +130,12 @@ main {
   font-family: "Roboto", serif;
   font-size: 1.2rem;
   padding: 10px 20px;
-  background-color: #f4ce14; /* Add button background color */
+  background-color: #f4ce14;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* List Container */
 .Main-List ul {
   display: flex;
   justify-content: space-between;
@@ -148,25 +144,24 @@ main {
   gap: 5vh;
   padding: 0;
   margin: 0;
-  flex-wrap: nowrap; /* Make it responsive */
+  flex-wrap: nowrap;
 }
 
 .Main-List ul li {
   background-color: #f9f9f9;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for effect */
-  max-width: 30%; /* Limit width of each item */
-  flex-basis: 30%; /* Items take 30% of available space */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 30%;
+  flex-basis: 30%;
   text-align: center;
   transition: transform 0.3s;
 }
 
 .Main-List ul li:hover {
-  transform: scale(1.05); /* Add a hover scale effect */
+  transform: scale(1.05);
 }
 
-/* Image Styling */
 .food {
   display: block;
   object-fit: cover;
@@ -176,7 +171,6 @@ main {
   margin-bottom: 15px;
 }
 
-/* Name and Price */
 .Name-Price {
   display: flex;
   justify-content: space-between;
@@ -193,10 +187,9 @@ main {
 
 .Name-Price p {
   margin: 0;
-  color: #ff4500; /* Price in a contrasting color */
+  color: #ff4500;
 }
 
-/* Order Section */
 .Order {
   display: flex;
   justify-content: space-between;
@@ -210,22 +203,18 @@ main {
 }
 
 .Order img {
-  height: 20px; /* Make the icon larger for visibility */
+  height: 20px;
   width: 30px;
 }
 
-/* Footer */
-
 .Footer {
   display: flex;
-  justify-content: space-evenly; /* Space out the columns evenly */
-  align-items: flex-start; /* Align items at the top */
+  justify-content: space-evenly;
+  align-items: flex-start;
 
-  /* Limit width of the footer */
-  /* Add padding around the footer */
-  margin: 0 auto; /* Center the footer */
-  background-color: #f0f0f0; /* Optional background color */
-  position: relative; /* Remove absolute positioning */
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  position: relative;
   bottom: 0;
 
   padding-top: 80px;
@@ -233,7 +222,7 @@ main {
 }
 
 .Footer img {
-  max-width: 150px; /* Adjust logo size */
+  max-width: 150px;
 }
 
 .Footer ul {
@@ -253,10 +242,9 @@ main {
   color: grey;
 }
 
-/* Optional Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .Footer {
-    flex-direction: column; /* Stack footer items on smaller screens */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
@@ -320,7 +308,7 @@ form input {
   font-family: "Roboto", serif;
   font-size: 1.2rem;
   padding: 10px 20px;
-  background-color: #f4ce14; /* Add button background color */
+  background-color: #f4ce14;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -335,7 +323,6 @@ form input {
   font-family: "Karla", serif;
 }
 
-/* src/Sections/ConfirmedBooking.css */
 .confirmed-booking {
   display: flex;
   flex-direction: column;

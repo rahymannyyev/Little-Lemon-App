@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const BookingForm = ({ availableTimes, dispatch }) => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleDateChange = (e) => {
     const newDate = new Date(e.target.value);
@@ -28,7 +28,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
     const isSuccess = submitAPI(formData);
     if (isSuccess) {
-      navigate("/confirmed", { state: formData }); // Pass formData via navigate's state
+      navigate("/confirmed", { state: formData });
     }
   };
 
@@ -50,6 +50,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             id="res-date"
             value={selectedDate}
             onChange={handleDateChange}
+            required
           />
 
           <label htmlFor="res-time">Choose time</label>
@@ -57,7 +58,11 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             id="res-time"
             value={selectedTime}
             onChange={(e) => setSelectedTime(e.target.value)}
+            required
           >
+            <option value="" disabled>
+              Select a time
+            </option>
             {TimesAvailable(availableTimes)}
           </select>
         </div>
@@ -72,6 +77,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             id="guests"
             value={guests}
             onChange={(e) => setGuests(e.target.value)}
+            required
           />
 
           <label htmlFor="occasion">Occasion</label>
@@ -79,6 +85,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
             id="occasion"
             value={occasion}
             onChange={(e) => setOccasion(e.target.value)}
+            required
           >
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
@@ -91,6 +98,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
           className="button-self"
           type="submit"
           value="Make Your reservation"
+          disabled={!selectedDate || !selectedTime || !guests || !occasion}
         />
       </div>
     </form>

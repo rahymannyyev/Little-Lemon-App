@@ -13,7 +13,6 @@ export default function Header({ onReserveClick }) {
           recipes served with a modern twist.
         </p>
         <button onClick={onReserveClick}>Reserve a table</button>{" "}
-        {/* Trigger the function */}
       </div>
       <div className="Image-Part">
         <img src={food} alt="Food" />

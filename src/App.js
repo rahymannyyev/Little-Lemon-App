@@ -1,5 +1,3 @@
-/* global fetchAPI, submitAPI */
-
 import { useState } from "react";
 import React, { useReducer } from "react";
 import {
