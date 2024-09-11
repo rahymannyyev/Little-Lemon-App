@@ -1,15 +1,35 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const BookingForm = ({ availableTimes, dispatch }) => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  // Handle date change and dispatch the action to update times
   const handleDateChange = (e) => {
+    const newDate = new Date(e.target.value);
     setSelectedDate(e.target.value);
-    dispatch({ type: "UPDATE_TIMES", payload: e.target.value });
+    dispatch({ type: "UPDATE_TIMES", payload: newDate });
+  };
+  const submitAPI = function (formData) {
+    return true;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = {
+      date: selectedDate,
+      time: selectedTime,
+      guests,
+      occasion,
+    };
+
+    const isSuccess = submitAPI(formData);
+    if (isSuccess) {
+      navigate("/confirmed", { state: formData }); // Pass formData via navigate's state
+    }
   };
 
   const TimesAvailable = (times) => {
@@ -21,7 +41,7 @@ const BookingForm = ({ availableTimes, dispatch }) => {
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="form">
         <div className="left">
           <label htmlFor="res-date">Choose date</label>
